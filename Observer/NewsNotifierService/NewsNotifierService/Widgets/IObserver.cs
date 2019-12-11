@@ -5,8 +5,8 @@ using System.Text;
 
 namespace NewsNotifierService.Widgets
 {
-    public interface IWidget
+    public interface IObserver
     {
-        void Update(string twitter, string email);
+        void Update(string twitter, string vk);
     }
 }
