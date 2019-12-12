@@ -1,41 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
-using NewsNotifierService.Widgets;
 
 
 namespace NewsNotifierService.Aggregator
 {
-    public class NewsAggregator: ISubject
+    public class NewsEventArgs
     {
+        public string Twitter { get; private set; }
+        public string Vk { get; private set; }
 
-        private readonly List<IObserver> _widgets;
+        public NewsEventArgs(string twitter, string vk)
+        {
+            Twitter = twitter;
+            Vk = vk;
+        }
+    }
+
+    public delegate void NewsChangeEventHandler(object sender, NewsEventArgs e);
+
+    public class NewsAggregator
+    {
         private readonly Random _random;
-        
+        public event NewsChangeEventHandler NewsChanged;
         public NewsAggregator()
         {
-            _widgets = new List<IObserver>();
             _random = new Random();
-        }
-        
-        public void RegisterObserver(IObserver observerToRegister)
-        {
-            _widgets.Add(observerToRegister);
-        }
-
-        public bool ReleaseObserver(IObserver observerToRelease)
-        {
-            return _widgets.Remove(observerToRelease);
         }
 
         public void NotifyObservers()
         {
             var twitterNews = GetTwitter();
             var vkNews = GetVk();
-
-            foreach (var w in _widgets)
-            {
-                w.Update(twitterNews, vkNews);
-            }
+            NewsChanged?.Invoke(this, new NewsEventArgs(twitterNews, vkNews));
         }
 
         private string GetTwitter()

@@ -1,14 +1,15 @@
 ﻿using System;
+using NewsNotifierService.Aggregator;
 
 namespace NewsNotifierService.Widgets
 {
-    class VkObserver : IObserver
+    class VkObserver : IObserver, IWidget
     {
         private string _vk;
 
-        public void Update(string twitter, string vk)
+        public void Update(object obj, NewsEventArgs news)
         {
-            _vk = vk;
+            _vk = news.Vk;
             Display();
         }
 

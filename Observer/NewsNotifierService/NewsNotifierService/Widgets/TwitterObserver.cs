@@ -1,13 +1,15 @@
 ﻿using System;
+using NewsNotifierService.Aggregator;
 
 namespace NewsNotifierService.Widgets
 {
-    public class TwitterObserver : IObserver
+    public class TwitterObserver : IObserver, IWidget
     {
-        private string _tweet;        
-        public void Update(string twitter, string vk)
+        private string _tweet;
+
+        public void Update(object obj, NewsEventArgs news)
         {
-            _tweet = twitter;
+            _tweet = news.Twitter;
             Display();
         }
 
@@ -15,6 +17,5 @@ namespace NewsNotifierService.Widgets
         {
             Console.WriteLine("tweet info: " + _tweet);
         }
-
     }
 }
