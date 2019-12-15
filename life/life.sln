@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{92F12557-9B12-4750-9E41-B3BDC24F63F6}"
+	ProjectSection(SolutionItems) = preProject
+		life.vsmdi = life.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Life", "Life\Life.csproj", "{7352614C-364F-4803-BD18-64F86CD5D06C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7352614C-364F-4803-BD18-64F86CD5D06C}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{7352614C-364F-4803-BD18-64F86CD5D06C}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{7352614C-364F-4803-BD18-64F86CD5D06C}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{7352614C-364F-4803-BD18-64F86CD5D06C}.Debug|x86.ActiveCfg = Debug|x86
+		{7352614C-364F-4803-BD18-64F86CD5D06C}.Debug|x86.Build.0 = Debug|x86
+		{7352614C-364F-4803-BD18-64F86CD5D06C}.Release|Any CPU.ActiveCfg = Release|x86
+		{7352614C-364F-4803-BD18-64F86CD5D06C}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{7352614C-364F-4803-BD18-64F86CD5D06C}.Release|Mixed Platforms.Build.0 = Release|x86
+		{7352614C-364F-4803-BD18-64F86CD5D06C}.Release|x86.ActiveCfg = Release|x86
+		{7352614C-364F-4803-BD18-64F86CD5D06C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61D42EBA-566D-4428-AE0F-560B963A0B0A}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = life.vsmdi
+	EndGlobalSection
+EndGlobal
