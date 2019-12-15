@@ -10,7 +10,7 @@ namespace Life
     public class Program
     {
         private const int RabbitCountAtGeneration = 100; 
-        private const int CountIteration = 50;           
+        private const int CountIteration = 20;           
         private const double MutationRate = 0.09;
         private const int DnaElementsCount = 15;
         private const double FitnessSolution = 7.2;
@@ -33,8 +33,6 @@ namespace Life
         {
             var rand = new Random();
             var currentPopulation = new Population(factory.GenerateRabbits(RabbitCountAtGeneration), selection);
-            currentPopulation.FindBestIndivid().Display();
-            Console.ReadKey();
             
             for (int iteration=0; iteration < CountIteration; iteration++) 
             {
